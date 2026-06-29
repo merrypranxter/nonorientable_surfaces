@@ -1,0 +1,6 @@
+# Dependencies for the Python examples.
+#   pip install -r examples/requirements.txt
+numpy>=1.21
+matplotlib>=3.5
+# pillow is only needed to save the animated examples (04, 05, 07) as .gif
+pillow>=9.0

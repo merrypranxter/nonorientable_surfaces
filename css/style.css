@@ -1,0 +1,96 @@
+:root {
+  --bg: #0b0d12;
+  --ink: #e8edf6;
+  --muted: #8a93a6;
+  --front: #4ea1ff;
+  --back: #ff5d73;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#title {
+  position: fixed;
+  top: 18px;
+  left: 22px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#title h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+}
+
+#title p {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--muted);
+  max-width: 28ch;
+}
+
+#caption-bar {
+  position: fixed;
+  bottom: 18px;
+  left: 22px;
+  z-index: 10;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: rgba(11, 13, 18, 0.55);
+  padding: 8px 12px;
+  border-left: 2px solid var(--front);
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  max-width: 46ch;
+}
+
+#legend {
+  position: fixed;
+  bottom: 18px;
+  right: 22px;
+  z-index: 10;
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 32ch;
+  justify-content: flex-end;
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+.swatch.front { background: var(--front); }
+.swatch.back { background: var(--back); }
+.hint { flex-basis: 100%; text-align: right; }
+
+/* lil-gui sits top-right by default; nudge it below the legend-free zone */
+.lil-gui.root {
+  --width: 260px;
+}
