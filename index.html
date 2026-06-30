@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nonorientable_surfaces — the One-Sided Wanderer</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--
+    Three.js r160 is vendored under vendor/three so the viewer runs offline with
+    no build step and no CDN. To upgrade: replace the files in vendor/three/.
+  -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <header id="title">
+    <h1>nonorientable_surfaces</h1>
+    <p>There is no inside. There is no outside. There is only the surface.</p>
+  </header>
+
+  <footer id="caption-bar">
+    <span id="caption"></span>
+  </footer>
+
+  <aside id="legend">
+    <span class="swatch front"></span> front face
+    <span class="swatch back"></span> back face
+    <span class="hint">— if you can see both, the surface has only one side.</span>
+  </aside>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

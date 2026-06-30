@@ -1,0 +1,22 @@
+{
+  "name": "nonorientable_surfaces",
+  "version": "0.1.0",
+  "description": "Möbius strip, Klein bottle, and real projective plane visualizer — always showing the orientation reversal.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx --yes serve -l 8000 ."
+  },
+  "keywords": [
+    "mobius",
+    "klein-bottle",
+    "projective-plane",
+    "boys-surface",
+    "non-orientable",
+    "topology",
+    "webgl",
+    "three.js"
+  ],
+  "license": "MIT",
+  "private": true
+}
